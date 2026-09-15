@@ -3,6 +3,7 @@ import Greeting from "./layout/Greeting/Greeting";
 import Calendar from "./layout/Greeting/Calendar";
 import WeddingGallery from "./layout/Gallery";
 import LocationMap from "./layout/Map";
+import Guestbook from "./layout/Guestbook";
 import Account from "./layout/Account/Account";
 import coverImg from "./assets/images/main_cover.jpg";
 import useScrollFadeIn from "./hooks/useScrollFadeIn";
@@ -134,6 +135,7 @@ function App() {
       <Calendar />
       <WeddingGallery />
       <LocationMap />
+      <Guestbook />
       <Account />
     </AppContainer>
   );
