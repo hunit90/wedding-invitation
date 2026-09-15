@@ -1,0 +1,129 @@
+{
+  "greeting": {
+    "title": "이기훈 💍 정화용\n결혼합니다!",
+    "message": "저희 결혼합니다.\n\n서로에게 알맞은 온도로 따뜻하던 우리.\n부부로서 첫걸음을 내딛는 그 설렘의 순간에\n소중한 분들을 초대합니다.",
+    "host": {
+      "groom": {
+        "name": "기훈",
+        "relation": "아들",
+        "parents": [
+          {
+            "relation": "아버지",
+            "name": "이명수"
+          },
+          {
+            "relation": "어머니",
+            "name": "황정란"
+          }
+        ]
+      },
+      "bride": {
+        "name": "화용",
+        "relation": "딸",
+        "parents": [
+          {
+            "relation": "아버지",
+            "name": "정태길"
+          },
+          {
+            "relation": "어머니",
+            "name": "조순자"
+          }
+        ]
+      }
+    },
+    "eventDetail": "2026년 12월 05일 (토) 17:00\n우리은행 본점 4F"
+  },
+  "hostInfo": [
+    {
+      "host": "신랑측",
+      "accountInfo": [
+        {
+          "name": "이기훈",
+          "relation": "신랑",
+          "bank": "카카오뱅크",
+          "account": "1234-56-789012",
+          "kakaopayAccount": "",
+          "tossAccount": ""
+        },
+        {
+          "name": "이명수",
+          "relation": "아버지",
+          "bank": "농협",
+          "account": "123-45-678901"
+        },
+        {
+          "name": "황정란",
+          "relation": "어머니",
+          "bank": "농협",
+          "account": "123-45-678901"
+        }
+      ]
+    },
+    {
+      "host": "신부측",
+      "accountInfo": [
+        {
+          "name": "정화용",
+          "relation": "신부",
+          "bank": "토스뱅크",
+          "account": "1234-5678-9012",
+          "kakaopayAccount": "",
+          "tossAccount": ""
+        },
+        {
+          "name": "정태길",
+          "relation": "아버지",
+          "bank": "농협",
+          "account": "123-45-678901"
+        },
+        {
+          "name": "조순자",
+          "relation": "어머니",
+          "bank": "농협",
+          "account": "123-45-678901"
+        }
+      ]
+    }
+  ],
+  "mapInfo": {
+    "address1": "우리은행 본점 4F",
+    "address2": "서울 중구 소공로 51 우리은행 본점",
+    "naverMap": "https://naver.me/57VZ9lP7",
+    "kakaoMap": "https://kko.to/0TVG6zSFbM",
+    "tmap": "tmap://search?name=우리은행%20본점",
+    "lat": 37.559984,
+    "lon": 126.982646
+  },
+  "locationInfo": [
+    {
+      "title": "📍 지하철",
+      "desc": "👉🏻 4호선 회현역 1번 출구 (도보 5분)\n👉🏻 2호선 을지로입구역 7번 출구 (도보 10분)"
+    },
+    {
+      "title": "📍 주차안내",
+      "desc": "👉🏻 우리은행 본점 지하 주차장 이용 (무료)"
+    },
+    {
+      "title": "🚌 버스 대절 안내",
+      "desc": "멀리서 오시는 하객분들의 편의를 위해\n예식 당일 버스를 운행합니다.\n\n출발 일시\n2026년 12월 5일(토) 오후 2시\n\n출발 장소\n해병대전우회 충주시지회"
+    }
+  ],
+  "emojis": [
+    "❤️",
+    "💛",
+    "💌",
+    "🥹",
+    "🥳",
+    "👰🏻",
+    "🤵🏻️",
+    "🤍",
+    "✨",
+    "💍",
+    "💒",
+    "💕",
+    "😍",
+    "🔔",
+    "💘"
+  ]
+}
