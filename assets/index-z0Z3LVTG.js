@@ -574,16 +574,6 @@ ${JSON.stringify(st.instance.options,null,2)}`);default:st.instance.reset(),st.i
   border-radius: 35px;
   box-shadow: inset 0 0 10px rgba(0,0,0,0.03), 0 0 15px rgba(0,0,0,0.03);
 `,D2=A.div`position: absolute; top: 0; left: 25px; right: 25px; height: 1px; background: rgba(0,0,0,0.15);`,N2=A.div`position: absolute; bottom: 0; left: 25px; right: 25px; height: 1px; background: rgba(0,0,0,0.15);`,R2=A.div`position: absolute; top: 25px; bottom: 25px; left: 0; width: 1px; background: rgba(0,0,0,0.15);`,L2=A.div`position: absolute; top: 25px; bottom: 25px; right: 0; width: 1px; background: rgba(0,0,0,0.15);`,U2=A.div`position: absolute; top: 0; left: 0; width: 25px; height: 25px; border-bottom: 1px solid rgba(0,0,0,0.15); border-right: 1px solid rgba(0,0,0,0.15); border-radius: 0 0 25px 0;`,H2=A.div`position: absolute; top: 0; right: 0; width: 25px; height: 25px; border-bottom: 1px solid rgba(0,0,0,0.15); border-left: 1px solid rgba(0,0,0,0.15); border-radius: 0 0 0 25px;`,j2=A.div`position: absolute; bottom: 0; left: 0; width: 25px; height: 25px; border-top: 1px solid rgba(0,0,0,0.15); border-right: 1px solid rgba(0,0,0,0.15); border-radius: 0 25px 0 0;`,B2=A.div`position: absolute; bottom: 0; right: 0; width: 25px; height: 25px; border-top: 1px solid rgba(0,0,0,0.15); border-left: 1px solid rgba(0,0,0,0.15); border-radius: 25px 0 0 0;`,Z2=A.div`
-  margin-bottom: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
-  svg {
-    width: 140px;
-    opacity: 0.8;
-  }
-`,Y2=A.div`
   font-family: var(--font-en);
   font-size: 15px;
   letter-spacing: 5px;
@@ -591,7 +581,7 @@ ${JSON.stringify(st.instance.options,null,2)}`);default:st.instance.reset(),st.i
   text-transform: uppercase;
   color: #111;
   font-weight: 500;
-`,G2=A.div`
+`,Y2=A.div`
   width: 100%;
   max-width: 320px;
   background-color: #0c0c0c; /* 검은색 배경 매트 */
@@ -601,12 +591,12 @@ ${JSON.stringify(st.instance.options,null,2)}`);default:st.instance.reset(),st.i
   display: flex;
   justify-content: center;
   align-items: center;
-`,q2=A.img`
+`,G2=A.img`
   width: 100%;
   aspect-ratio: 3/2; 
   object-fit: cover;
   display: block;
-`,V2=A.h1`
+`,q2=A.h1`
   font-family: var(--font-cursive);
   font-size: 2.8rem; /* 한 줄에 들어가도록 살짝 조정 */
   font-weight: 400;
@@ -619,4 +609,4 @@ ${JSON.stringify(st.instance.options,null,2)}`);default:st.instance.reset(),st.i
   @media (max-width: 380px) {
     font-size: 2.4rem;
   }
-`;function X2(){const t=Me();return g.jsxs(A2,{children:[g.jsx(O2,{children:g.jsxs(C2,{...t,children:[g.jsxs(w2,{children:[g.jsx(M2,{}),g.jsx(D2,{}),g.jsx(N2,{}),g.jsx(R2,{}),g.jsx(L2,{}),g.jsx(U2,{}),g.jsx(H2,{}),g.jsx(j2,{}),g.jsx(B2,{})]}),g.jsx(Z2,{children:g.jsxs("svg",{viewBox:"0 0 150 20",fill:"none",xmlns:"http://www.w3.org/2000/svg",children:[g.jsx("path",{d:"M50 10 Q 30 -5 15 10 Q 5 20 15 15 Q 25 10 50 10",stroke:"#333",strokeWidth:"0.8",fill:"none"}),g.jsx("path",{d:"M100 10 Q 120 -5 135 10 Q 145 20 135 15 Q 125 10 100 10",stroke:"#333",strokeWidth:"0.8",fill:"none"}),g.jsx("path",{d:"M50 10 Q 70 25 75 10 Q 70 -5 50 10",stroke:"#333",strokeWidth:"0.8",fill:"none"}),g.jsx("path",{d:"M100 10 Q 80 25 75 10 Q 80 -5 100 10",stroke:"#333",strokeWidth:"0.8",fill:"none"}),g.jsx("polygon",{points:"75,6 79,10 75,14 71,10",fill:"#333"})]})}),g.jsx(Y2,{children:"Wedding Day"}),g.jsx(G2,{children:g.jsx(q2,{src:z2,alt:"Cover"})}),g.jsx(V2,{children:"Kihun & Hwayong"})]})}),g.jsx(Xb,{}),g.jsx(Wb,{}),g.jsx(w_,{}),g.jsx(c2,{}),g.jsx(E2,{})]})}A1.createRoot(document.getElementById("root")).render(g.jsx(M.StrictMode,{children:g.jsx(X2,{})}));
+`;function V2(){const t=Me();return g.jsxs(A2,{children:[g.jsx(O2,{children:g.jsxs(C2,{...t,children:[g.jsxs(w2,{children:[g.jsx(M2,{}),g.jsx(D2,{}),g.jsx(N2,{}),g.jsx(R2,{}),g.jsx(L2,{}),g.jsx(U2,{}),g.jsx(H2,{}),g.jsx(j2,{}),g.jsx(B2,{})]}),g.jsx(Z2,{children:"Wedding Day"}),g.jsx(Y2,{children:g.jsx(G2,{src:z2,alt:"Cover"})}),g.jsx(q2,{children:"Kihun & Hwayong"})]})}),g.jsx(Xb,{}),g.jsx(Wb,{}),g.jsx(w_,{}),g.jsx(c2,{}),g.jsx(E2,{})]})}A1.createRoot(document.getElementById("root")).render(g.jsx(M.StrictMode,{children:g.jsx(V2,{})}));
