@@ -2,26 +2,43 @@
   box-sizing: border-box;
 }
 
+:root {
+  --primary-color: #5d5d5d;
+  --bg-color: #fcfbf9; /* 약간 따뜻한 웜톤 배경 */
+  --point-color: #b5a397;
+  --font-kr: 'Gowun Dodum', sans-serif;
+  --font-en: 'Cinzel', serif;
+  --font-cursive: 'Pinyon Script', cursive;
+}
+
 body {
   margin: 0;
-  font-family:
-    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
-    Arial, sans-serif;
-  background-color: #f0f0f0;
-  color: #333;
+  background-color: #ebebeb;
+  color: var(--primary-color);
+  word-break: keep-all;
 }
 
 #root {
   max-width: 480px;
   margin: 0 auto;
-  background-color: #fff;
+  background-color: var(--bg-color);
   min-height: 100vh;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 20px rgba(0,0,0,0.08);
+  overflow-x: hidden;
 }
 
-h1,
-h2,
-h3,
-p {
+h1, h2, h3, p {
   margin: 0;
+  font-weight: normal;
+}
+
+/* 페이드 인 애니메이션 클래스 */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
 }

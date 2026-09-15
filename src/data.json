@@ -1,33 +1,39 @@
 {
   "greeting": {
     "title": "이기훈 💍 정화용\n결혼합니다!",
-    "message": "저희 결혼합니다.\n\n서로에게 알맞은 온도로 따뜻하던 우리.\n부부로서 첫걸음을 내딛는 그 설렘의 순간에\n소중한 분들을 초대합니다.",
+    "message": "예쁜 예감이 들었다.\n우리는 언제나\n손을 잡고 있게 될 것이다.\n-이이체 '연인'中-\n\n서로의 따뜻함을 닮아가며\n예쁘게 살겠습니다.\n귀한 발걸음 하시어\n축복해 주시면 감사하겠습니다.",
     "host": {
       "groom": {
         "name": "기훈",
-        "relation": "아들",
+        "relation": "장남",
+        "phone": "MDEwLTExMTEtMjIyMg==",
         "parents": [
           {
             "relation": "아버지",
-            "name": "이명수"
+            "name": "이명수",
+            "phone": "MDEwLTMzMzMtNDQ0NA=="
           },
           {
             "relation": "어머니",
-            "name": "황정란"
+            "name": "황정란",
+            "phone": "MDEwLTU1NTUtNjY2Ng=="
           }
         ]
       },
       "bride": {
         "name": "화용",
-        "relation": "딸",
+        "relation": "장녀",
+        "phone": "MDEwLTc3NzctODg4OA==",
         "parents": [
           {
             "relation": "아버지",
-            "name": "정태길"
+            "name": "정태길",
+            "phone": "MDEwLTk5OTktMDAwMA=="
           },
           {
             "relation": "어머니",
-            "name": "조순자"
+            "name": "조순자",
+            "phone": "MDEwLTEyMzQtNTY3OA=="
           }
         ]
       }
@@ -98,11 +104,11 @@
   "locationInfo": [
     {
       "title": "📍 지하철",
-      "desc": "👉🏻 4호선 회현역 1번 출구 (도보 5분)\n👉🏻 2호선 을지로입구역 7번 출구 (도보 10분)"
+      "desc": "4호선 회현역 1번 출구 (도보 5분)\n2호선 을지로입구역 7번 출구 (도보 10분)"
     },
     {
       "title": "📍 주차안내",
-      "desc": "👉🏻 우리은행 본점 지하 주차장 이용 (무료)"
+      "desc": "우리은행 본점 지하 주차장 이용 (무료)"
     },
     {
       "title": "🚌 버스 대절 안내",
