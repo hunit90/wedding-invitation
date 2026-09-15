@@ -115,14 +115,6 @@ function App() {
     <AppContainer>
       <CoverSection>
         <Frame {...fade}>
-          {/* 장식선 SVG */}
-          <Ornament>
-            <svg viewBox="0 0 100 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M50 10C35 10 35 2 20 2C5 2 5 10 5 10C5 10 5 18 20 18C35 18 35 10 50 10ZM50 10C65 10 65 2 80 2C95 2 95 10 95 10C95 10 95 18 80 18C65 18 65 10 50 10Z" stroke="#222" strokeWidth="0.5"/>
-              <circle cx="50" cy="10" r="2" fill="#222"/>
-            </svg>
-          </Ornament>
-          
           <TopText>Wedding Day</TopText>
           
           <PhotoWrapper>
