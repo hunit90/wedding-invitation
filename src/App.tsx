@@ -61,18 +61,6 @@ const CornerTR = styled.div`position: absolute; top: 0; right: 0; width: 25px; h
 const CornerBL = styled.div`position: absolute; bottom: 0; left: 0; width: 25px; height: 25px; border-top: 1px solid rgba(0,0,0,0.15); border-right: 1px solid rgba(0,0,0,0.15); border-radius: 0 25px 0 0;`;
 const CornerBR = styled.div`position: absolute; bottom: 0; right: 0; width: 25px; height: 25px; border-top: 1px solid rgba(0,0,0,0.15); border-left: 1px solid rgba(0,0,0,0.15); border-radius: 25px 0 0 0;`;
 
-const Ornament = styled.div`
-  margin-bottom: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
-  svg {
-    width: 140px;
-    opacity: 0.8;
-  }
-`;
-
 const TopText = styled.div`
   font-family: var(--font-en);
   font-size: 15px;
@@ -130,17 +118,6 @@ function App() {
             <CornerTL /><CornerTR /><CornerBL /><CornerBR />
           </BorderWrapper>
 
-          {/* 우아한 르네상스 스타일 리본/문양 SVG */}
-          <Ornament>
-            <svg viewBox="0 0 150 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M50 10 Q 30 -5 15 10 Q 5 20 15 15 Q 25 10 50 10" stroke="#333" strokeWidth="0.8" fill="none"/>
-              <path d="M100 10 Q 120 -5 135 10 Q 145 20 135 15 Q 125 10 100 10" stroke="#333" strokeWidth="0.8" fill="none"/>
-              <path d="M50 10 Q 70 25 75 10 Q 70 -5 50 10" stroke="#333" strokeWidth="0.8" fill="none"/>
-              <path d="M100 10 Q 80 25 75 10 Q 80 -5 100 10" stroke="#333" strokeWidth="0.8" fill="none"/>
-              <polygon points="75,6 79,10 75,14 71,10" fill="#333" />
-            </svg>
-          </Ornament>
-          
           <TopText>Wedding Day</TopText>
           
           <PhotoWrapper>
