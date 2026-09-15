@@ -19,35 +19,57 @@ const CoverSection = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #f2efe9; /* 부드러운 베이지 배경 */
+  background-color: #efede7; /* 스크린샷과 유사한 따뜻한 베이지 배경 */
   color: #333;
-  padding: 40px 20px; /* 위아래 여백을 줄여 전체 높이 축소 */
+  padding: 40px 15px; 
   box-sizing: border-box;
 `;
 
 const Frame = styled.div`
   position: relative;
   width: 100%;
-  border: 1.5px solid rgba(0,0,0,0.08);
-  border-radius: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 50px 20px; /* 프레임 내부 여백 */
+  padding: 60px 20px;
   box-sizing: border-box;
+`;
+
+/* 모서리가 안으로 파인(오목한) 우아한 테두리 장식 */
+const BorderWrapper = styled.div`
+  position: absolute;
+  top: 10px; left: 10px; right: 10px; bottom: 10px;
+  pointer-events: none;
+`;
+
+const OuterEmboss = styled.div`
+  position: absolute;
+  top: -6px; left: -6px; right: -6px; bottom: -6px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 35px;
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.03), 0 0 15px rgba(0,0,0,0.03);
+`;
+
+const BorderTop = styled.div`position: absolute; top: 0; left: 25px; right: 25px; height: 1px; background: rgba(0,0,0,0.15);`;
+const BorderBottom = styled.div`position: absolute; bottom: 0; left: 25px; right: 25px; height: 1px; background: rgba(0,0,0,0.15);`;
+const BorderLeft = styled.div`position: absolute; top: 25px; bottom: 25px; left: 0; width: 1px; background: rgba(0,0,0,0.15);`;
+const BorderRight = styled.div`position: absolute; top: 25px; bottom: 25px; right: 0; width: 1px; background: rgba(0,0,0,0.15);`;
+
+const CornerTL = styled.div`position: absolute; top: 0; left: 0; width: 25px; height: 25px; border-bottom: 1px solid rgba(0,0,0,0.15); border-right: 1px solid rgba(0,0,0,0.15); border-radius: 0 0 25px 0;`;
+const CornerTR = styled.div`position: absolute; top: 0; right: 0; width: 25px; height: 25px; border-bottom: 1px solid rgba(0,0,0,0.15); border-left: 1px solid rgba(0,0,0,0.15); border-radius: 0 0 0 25px;`;
+const CornerBL = styled.div`position: absolute; bottom: 0; left: 0; width: 25px; height: 25px; border-top: 1px solid rgba(0,0,0,0.15); border-right: 1px solid rgba(0,0,0,0.15); border-radius: 0 25px 0 0;`;
+const CornerBR = styled.div`position: absolute; bottom: 0; right: 0; width: 25px; height: 25px; border-top: 1px solid rgba(0,0,0,0.15); border-left: 1px solid rgba(0,0,0,0.15); border-radius: 25px 0 0 0;`;
+
+const Ornament = styled.div`
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   
-  /* 이중 테두리(액자 느낌) */
-  &::before {
-    content: '';
-    position: absolute;
-    top: 8px;
-    left: 8px;
-    right: 8px;
-    bottom: 8px;
-    border: 1px solid rgba(0,0,0,0.04);
-    border-radius: 22px;
-    pointer-events: none;
+  svg {
+    width: 140px;
+    opacity: 0.8;
   }
 `;
 
@@ -57,43 +79,42 @@ const TopText = styled.div`
   letter-spacing: 5px;
   margin-bottom: 40px;
   text-transform: uppercase;
-  color: #222;
+  color: #111;
+  font-weight: 500;
 `;
 
 const PhotoWrapper = styled.div`
   width: 100%;
   max-width: 320px;
-  /* 가로로 긴 사진 비율(3:2)에 맞춤 */
-  aspect-ratio: 3/2; 
+  background-color: #0c0c0c; /* 검은색 배경 매트 */
+  padding: 10px 25px; /* 사진 좌우로 검은 배경이 나오게 함 */
   margin-bottom: 40px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-  background-color: #fff;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 const Photo = styled.img`
   width: 100%;
-  height: 100%;
+  aspect-ratio: 3/2; 
   object-fit: cover;
   display: block;
 `;
 
 const CoverTitle = styled.h1`
   font-family: var(--font-cursive);
-  font-size: 3.2rem;
+  font-size: 2.8rem; /* 한 줄에 들어가도록 살짝 조정 */
   font-weight: 400;
   color: #1a1a1a;
   text-align: center;
-  margin-bottom: 10px;
-  letter-spacing: 2px;
-`;
-
-const CoverDate = styled.div`
-  font-size: 14px;
-  font-weight: 400;
-  letter-spacing: 2px;
-  color: #555;
-  margin-top: 15px;
-  font-family: var(--font-en);
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+  white-space: nowrap; /* 무조건 한 줄로 나오도록 강제 */
+  
+  @media (max-width: 380px) {
+    font-size: 2.4rem;
+  }
 `;
 
 function App() {
@@ -103,6 +124,23 @@ function App() {
     <AppContainer>
       <CoverSection>
         <Frame {...fade}>
+          <BorderWrapper>
+            <OuterEmboss />
+            <BorderTop /><BorderBottom /><BorderLeft /><BorderRight />
+            <CornerTL /><CornerTR /><CornerBL /><CornerBR />
+          </BorderWrapper>
+
+          {/* 우아한 르네상스 스타일 리본/문양 SVG */}
+          <Ornament>
+            <svg viewBox="0 0 150 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M50 10 Q 30 -5 15 10 Q 5 20 15 15 Q 25 10 50 10" stroke="#333" strokeWidth="0.8" fill="none"/>
+              <path d="M100 10 Q 120 -5 135 10 Q 145 20 135 15 Q 125 10 100 10" stroke="#333" strokeWidth="0.8" fill="none"/>
+              <path d="M50 10 Q 70 25 75 10 Q 70 -5 50 10" stroke="#333" strokeWidth="0.8" fill="none"/>
+              <path d="M100 10 Q 80 25 75 10 Q 80 -5 100 10" stroke="#333" strokeWidth="0.8" fill="none"/>
+              <polygon points="75,6 79,10 75,14 71,10" fill="#333" />
+            </svg>
+          </Ornament>
+          
           <TopText>Wedding Day</TopText>
           
           <PhotoWrapper>
@@ -112,7 +150,6 @@ function App() {
           <CoverTitle>
             Kihun & Hwayong
           </CoverTitle>
-          <CoverDate>2026. 12. 05</CoverDate>
         </Frame>
       </CoverSection>
 
