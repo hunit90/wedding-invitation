@@ -51,18 +51,6 @@ const Frame = styled.div`
   }
 `;
 
-const Ornament = styled.div`
-  margin-bottom: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
-  svg {
-    width: 120px;
-    opacity: 0.7;
-  }
-`;
-
 const TopText = styled.div`
   font-family: var(--font-en);
   font-size: 15px;
