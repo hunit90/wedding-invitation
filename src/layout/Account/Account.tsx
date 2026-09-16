@@ -186,14 +186,19 @@ export default function Account() {
   };
 
   const handleShare = () => {
-    if (window.Kakao) {
+    if (!window.Kakao) {
+      alert('카카오톡 공유 기능을 불러오지 못했습니다. 잠시 후 다시 시도해주세요.');
+      return;
+    }
+    
+    try {
       if (!window.Kakao.isInitialized()) {
         window.Kakao.init(import.meta.env.VITE_APP_KAKAOMAP_JAVASCRIPT_KEY);
       }
       window.Kakao.Share.sendDefault({
         objectType: 'feed',
         content: {
-          title: '기훈 & 화용 결혼합니다',
+          title: '기훈 💍 화용 결혼합니다',
           description: '2026년 12월 5일 (토) 오후 5시\\n우리은행 본점 4F',
           imageUrl: 'https://hunit90.github.io/wedding-invitation/og-image.jpg',
           link: {
@@ -211,6 +216,9 @@ export default function Account() {
           },
         ],
       });
+    } catch (error) {
+      console.error('Kakao Share Error:', error);
+      alert('카카오톡 공유 중 오류가 발생했습니다. 카카오 디벨로퍼스 사이트 도메인 설정을 확인해주세요.');
     }
   };
 
