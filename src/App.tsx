@@ -75,8 +75,8 @@ const TopText = styled.div`
 const PhotoWrapper = styled.div`
   width: 100%;
   max-width: 320px;
-  background-color: #0c0c0c; /* 검은색 배경 매트 */
-  padding: 10px 25px; /* 사진 좌우로 검은 배경이 나오게 함 */
+  //background-color: #0c0c0c; /* 검은색 배경 매트 */
+  //padding: 10px 25px; /* 사진 좌우로 검은 배경이 나오게 함 */
   margin-bottom: 40px;
   box-shadow: 0 15px 30px rgba(0,0,0,0.15);
   display: flex;
@@ -92,8 +92,8 @@ const Photo = styled.img`
 `;
 
 const CoverTitle = styled.h1`
-  font-family: var(--font-cursive);
-  font-size: 2.8rem; /* 한 줄에 들어가도록 살짝 조정 */
+  font-family: var(--font-en);
+  font-size: 1.4rem; /* 한 줄에 들어가도록 살짝 조정 */
   font-weight: 400;
   color: #1a1a1a;
   text-align: center;
@@ -124,7 +124,7 @@ function App() {
           <PhotoWrapper>
             <Photo src={coverImg} alt="Cover" />
           </PhotoWrapper>
-          
+
           <CoverTitle>
             Kihun & Hwayong
           </CoverTitle>

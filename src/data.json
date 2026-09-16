@@ -16,24 +16,24 @@
           {
             "relation": "어머니",
             "name": "황정란",
-            "phone": "MDEwLTU1NTUtNjY2Ng=="
+            "phone": "MDEwLTc5MDItNzkxMA=="
           }
         ]
       },
       "bride": {
         "name": "화용",
         "relation": "장녀",
-        "phone": "MDEwLTc3NzctODg4OA==",
+        "phone": "MDEwLTUxOTQtMjI0Ng==",
         "parents": [
           {
             "relation": "아버지",
             "name": "정태길",
-            "phone": "MDEwLTk5OTktMDAwMA=="
+            "phone": "MDEwLTU0NTktMjI0Ng=="
           },
           {
             "relation": "어머니",
             "name": "조순자",
-            "phone": "MDEwLTEyMzQtNTY3OA=="
+            "phone": "MDEwLTUwOTItMjI0Ng=="
           }
         ]
       }
@@ -47,22 +47,22 @@
         {
           "name": "이기훈",
           "relation": "신랑",
-          "bank": "카카오뱅크",
-          "account": "1234-56-789012",
+          "bank": "하나은행",
+          "account": "143-910309-24507",
           "kakaopayAccount": "",
           "tossAccount": ""
         },
         {
           "name": "이명수",
           "relation": "아버지",
-          "bank": "농협",
-          "account": "123-45-678901"
+          "bank": "우리은행",
+          "account": "114-07-224819"
         },
         {
           "name": "황정란",
           "relation": "어머니",
-          "bank": "농협",
-          "account": "123-45-678901"
+          "bank": "하나은행",
+          "account": "289-910193-54007"
         }
       ]
     },
@@ -72,22 +72,22 @@
         {
           "name": "정화용",
           "relation": "신부",
-          "bank": "토스뱅크",
-          "account": "1234-5678-9012",
+          "bank": "국민은행",
+          "account": "02810200000293",
           "kakaopayAccount": "",
           "tossAccount": ""
         },
         {
           "name": "정태길",
           "relation": "아버지",
-          "bank": "농협",
-          "account": "123-45-678901"
+          "bank": "신한은행",
+          "account": "100-001-219168"
         },
         {
           "name": "조순자",
           "relation": "어머니",
           "bank": "농협",
-          "account": "123-45-678901"
+          "account": "324-12-019371"
         }
       ]
     }

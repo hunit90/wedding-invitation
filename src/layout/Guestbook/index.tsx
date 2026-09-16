@@ -5,7 +5,7 @@ import { db } from "../../firebase";
 import useScrollFadeIn from "../../hooks/useScrollFadeIn";
 
 const Container = styled.section`
-  padding: 100px 20px;
+  padding: 80px 20px 20px 20px;
   background-color: #f2efe9;
 `;
 
@@ -33,26 +33,35 @@ const Form = styled.form`
   display: flex;
   flex-direction: column;
   gap: 15px;
+  width: 100%;
   max-width: 400px;
-  margin: 0 auto 50px auto;
+  margin: 0 auto;
   background-color: #fff;
   padding: 25px;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  box-sizing: border-box;
+
+  @media (max-width: 360px) {
+    padding: 20px 15px;
+  }
 `;
 
 const InputGroup = styled.div`
   display: flex;
   gap: 10px;
+  width: 100%;
 `;
 
 const Input = styled.input`
   flex: 1;
+  min-width: 0; /* flex 자식 요소가 부모 밖으로 삐져나가지 않게 함 */
   padding: 12px;
   border: 1px solid #ddd;
   border-radius: 6px;
   font-size: 14px;
   font-family: var(--font-kr);
+  box-sizing: border-box;
   
   &:focus {
     outline: none;
@@ -103,8 +112,13 @@ const MessageList = styled.div`
   display: flex;
   flex-direction: column;
   gap: 15px;
+  width: 100%;
   max-width: 400px;
   margin: 0 auto;
+  
+  &:not(:empty) {
+    margin-top: 40px;
+  }
 `;
 
 const MessageCard = styled.div`
@@ -113,6 +127,8 @@ const MessageCard = styled.div`
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.02);
   position: relative;
+  box-sizing: border-box;
+  width: 100%;
 `;
 
 const MessageHeader = styled.div`
@@ -268,18 +284,20 @@ export default function Guestbook() {
         </SubmitButton>
       </Form>
 
-      <MessageList>
-        {messages.map((msg) => (
-          <MessageCard key={msg.id}>
-            <DeleteButton onClick={() => handleDelete(msg.id, msg.password)}>✕</DeleteButton>
-            <MessageHeader>
-              <MessageName>{msg.name}</MessageName>
-              <MessageDate>{formatDate(msg.createdAt)}</MessageDate>
-            </MessageHeader>
-            <MessageContent>{msg.message}</MessageContent>
-          </MessageCard>
-        ))}
-      </MessageList>
+      {messages.length > 0 && (
+        <MessageList>
+          {messages.map((msg) => (
+            <MessageCard key={msg.id}>
+              <DeleteButton onClick={() => handleDelete(msg.id, msg.password)}>✕</DeleteButton>
+              <MessageHeader>
+                <MessageName>{msg.name}</MessageName>
+                <MessageDate>{formatDate(msg.createdAt)}</MessageDate>
+              </MessageHeader>
+              <MessageContent>{msg.message}</MessageContent>
+            </MessageCard>
+          ))}
+        </MessageList>
+      )}
     </Container>
   );
 }

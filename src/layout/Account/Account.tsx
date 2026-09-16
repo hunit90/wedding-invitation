@@ -4,13 +4,13 @@ import data from '../../data.json';
 import useScrollFadeIn from '../../hooks/useScrollFadeIn';
 
 const Container = styled.section`
-  padding: 100px 20px 120px;
+  padding: 20px 20px 120px;
   background-color: #f5f4f0; /* 배경색을 지도와 다르게 주어 구분감 부여 */
 `;
 
 const Header = styled.div`
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 `;
 
 const SubTitle = styled.div`
