@@ -140,6 +140,37 @@ const PayButton = styled.a`
   }
 `;
 
+const ShareButton = styled.button`
+  width: 100%;
+  max-width: 400px;
+  padding: 16px;
+  background-color: #fee500;
+  color: #191919;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-family: var(--font-kr);
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin: 50px auto 0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+
+  &:hover {
+    background-color: #f4dc00;
+  }
+`;
+
+declare global {
+  interface Window {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    Kakao: any;
+  }
+}
+
 export default function Account() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const fade = useScrollFadeIn<HTMLDivElement>();
@@ -152,6 +183,35 @@ export default function Account() {
     navigator.clipboard.writeText(text).then(() => {
       alert('계좌번호가 복사되었습니다.');
     });
+  };
+
+  const handleShare = () => {
+    if (window.Kakao) {
+      if (!window.Kakao.isInitialized()) {
+        window.Kakao.init(import.meta.env.VITE_APP_KAKAOMAP_JAVASCRIPT_KEY);
+      }
+      window.Kakao.Share.sendDefault({
+        objectType: 'feed',
+        content: {
+          title: '기훈 & 화용 결혼합니다',
+          description: '2026년 12월 5일 (토) 오후 5시\\n우리은행 본점 4F',
+          imageUrl: 'https://hunit90.github.io/wedding-invitation/og-image.jpg',
+          link: {
+            mobileWebUrl: 'https://hunit90.github.io/wedding-invitation/',
+            webUrl: 'https://hunit90.github.io/wedding-invitation/',
+          },
+        },
+        buttons: [
+          {
+            title: '청첩장 보기',
+            link: {
+              mobileWebUrl: 'https://hunit90.github.io/wedding-invitation/',
+              webUrl: 'https://hunit90.github.io/wedding-invitation/',
+            },
+          },
+        ],
+      });
+    }
   };
 
   return (
@@ -214,6 +274,13 @@ export default function Account() {
           </AccordionItem>
         ))}
       </div>
+
+      <ShareButton onClick={handleShare}>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="#191919">
+          <path d="M12 3c-5.5 0-10 3.5-10 7.8 0 2.8 1.8 5.2 4.6 6.5-.1.5-.5 2.1-.6 2.3-.1.4.1.4.3.3.3-.2 2.7-1.8 3.8-2.6.6.1 1.2.2 1.9.2 5.5 0 10-3.5 10-7.8S17.5 3 12 3z"/>
+        </svg>
+        카카오톡 공유하기
+      </ShareButton>
     </Container>
   );
 }
