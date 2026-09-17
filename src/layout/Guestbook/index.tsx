@@ -139,11 +139,18 @@ const Form = styled.form`
 
 const InputGroup = styled.div`
   display: flex;
+  flex-direction: column;
   gap: 10px;
+  
+  @media (min-width: 400px) {
+    flex-direction: row;
+  }
 `;
 
 const Input = styled.input`
   flex: 1;
+  width: 100%;
+  box-sizing: border-box;
   padding: 12px;
   border: 1px solid #ddd;
   border-radius: 6px;

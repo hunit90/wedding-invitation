@@ -8,6 +8,8 @@ import Account from "./layout/Account/Account";
 import coverImg from "./assets/images/main_cover.jpg";
 import useScrollFadeIn from "./hooks/useScrollFadeIn";
 
+import FloatingBGM from "./components/FloatingBGM";
+
 const AppContainer = styled.div`
   width: 100%;
   margin: 0 auto;
@@ -99,6 +101,8 @@ function App() {
 
   return (
     <AppContainer>
+      <FloatingBGM />
+      
       {/* 1. 메인 커버 섹션 */}
       <CoverSection>
         <TopHeader {...fade}>
