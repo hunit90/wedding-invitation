@@ -96,10 +96,10 @@
     "address1": "우리은행 본점 4F",
     "address2": "서울 중구 소공로 51 우리은행 본점",
     "naverMap": "https://naver.me/57VZ9lP7",
-    "kakaoMap": "https://kko.to/0TVG6zSFbM",
+    "kakaoMap": "https://place.map.kakao.com/8466281",
     "tmap": "tmap://search?name=우리은행%20본점",
-    "lat": 37.559984,
-    "lon": 126.982646
+    "lat": 37.55944556203258,
+    "lon": 126.98175547982937
   },
   "locationInfo": [
     {
