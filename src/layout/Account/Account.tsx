@@ -5,7 +5,7 @@ import useScrollFadeIn from '../../hooks/useScrollFadeIn';
 
 const Container = styled.section`
   padding: 20px 20px 120px;
-  background-color: #f5f4f0; /* 배경색을 지도와 다르게 주어 구분감 부여 */
+  background-color: var(--bg-color);
 `;
 
 const Header = styled.div`

@@ -4,11 +4,17 @@
 
 :root {
   --primary-color: #5d5d5d;
-  --bg-color: #fcfbf9; /* 약간 따뜻한 웜톤 배경 */
-  --point-color: #b5a397;
-  --font-kr: 'Gowun Dodum', sans-serif;
+  --font-kr: 'Pretendard', 'Gowun Dodum', 'Apple SD Gothic Neo', sans-serif;
   --font-en: 'Cinzel', serif;
-  --font-cursive: 'Parisienne', cursive;
+  --font-cursive: 'MyCustomWeddingFont';
+  --font-editorial: 'Playfair Display', serif;
+  
+  --bg-color: #f4f3ed;
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  --point-color: #B5A89E; 
+  --border-color: #e5e5e5;
+  --max-width: 450px;
 }
 
 body {
@@ -19,7 +25,7 @@ body {
 }
 
 #root {
-  max-width: 480px;
+  max-width: var(--max-width);
   margin: 0 auto;
   background-color: var(--bg-color);
   min-height: 100vh;
