@@ -95,7 +95,7 @@ export default function Calendar() {
           {dates.map((date, idx) => (
             <DayCell 
               key={idx} 
-              isSun={idx % 7 === 0} 
+              isSun={idx % 7 === 0 || date === 25} 
               isHighlight={date === 5}
             >
               {date || ''}
