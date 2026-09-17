@@ -115,11 +115,11 @@ function App() {
         </TopHeader>
 
         <div {...fade}>
-          <MainTitle>WEDDING DAY.</MainTitle>
+          <MainTitle>WEDDING DAY</MainTitle>
           <Names>이기훈 & 정화용</Names>
           <SubDate>
             2026년 12월 5일, 오후 5시<br />
-            (주)우리은행본점 4층 비전홀
+            우리은행본점 4층 비전홀
           </SubDate>
         </div>
 
